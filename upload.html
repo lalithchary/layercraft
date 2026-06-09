@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload & Get Quote | LayerCraft - 3D Print Quote</title>
+    <meta name="description" content="Upload your STL, OBJ, or 3MF file and preview it in 3D. Get an instant quote for professional 3D printing.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#00E5FF', accent: '#7C3AED', dark: '#0A0A0F', surface: '#12121A', surfaceHover: '#1A1A2E', border: '#1E293B', textPrimary: '#F0F0F5', textSecondary: '#94A3B8', success: '#00FF88', warning: '#FFB800' }, fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-dark text-textPrimary font-body">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg>
+                    <span class="font-heading font-bold text-xl text-textPrimary">Layer<span class="text-primary">Craft</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="services.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Services</a>
+                    <a href="materials.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Materials</a>
+                    <a href="pricing.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Pricing</a>
+                    <a href="industries.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Industries</a>
+                    <a href="about.html" class="text-textSecondary hover:text-primary transition-colors text-sm">About</a>
+                    <a href="faq.html" class="text-textSecondary hover:text-primary transition-colors text-sm">FAQ</a>
+                    <a href="contact.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Contact</a>
+                    <a href="upload.html" class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm">Get Quote</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-textSecondary hover:text-primary" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-border">
+            <div class="px-4 py-4 space-y-3">
+                <a href="services.html" class="block text-textSecondary">Services</a>
+                <a href="materials.html" class="block text-textSecondary">Materials</a>
+                <a href="pricing.html" class="block text-textSecondary">Pricing</a>
+                <a href="industries.html" class="block text-textSecondary">Industries</a>
+                <a href="about.html" class="block text-textSecondary">About</a>
+                <a href="faq.html" class="block text-textSecondary">FAQ</a>
+                <a href="contact.html" class="block text-textSecondary">Contact</a>
+                <a href="upload.html" class="block bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-center">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="pt-28 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-4">Upload & <span class="text-primary">Get Quote</span></h1>
+                <p class="text-textSecondary text-lg max-w-2xl mx-auto">Upload your 3D file, preview it in your browser, and request a quote. We respond within 2 hours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left: Upload + Viewer -->
+                <div>
+                    <!-- Upload Area -->
+                    <div id="uploadArea" class="upload-area mb-6">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5" class="mx-auto mb-4">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p class="text-textPrimary font-medium mb-2">Drop your 3D file here or click to browse</p>
+                        <p class="text-textSecondary text-sm">Supported formats: STL, OBJ, 3MF (Max 50MB)</p>
+                        <input type="file" id="fileInput" accept=".stl,.obj,.3mf" class="hidden">
+                    </div>
+
+                    <!-- File Info -->
+                    <div id="fileInfo" class="hidden bg-surface border border-border rounded-xl p-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-medium text-sm" id="fileName">-</p>
+                                <p class="text-textSecondary text-xs" id="fileSize">-</p>
+                            </div>
+                            <button id="removeFile" class="text-textSecondary hover:text-red-400 transition-colors" aria-label="Remove file">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 3D Viewer -->
+                    <div id="viewer-container" class="w-full aspect-square lg:aspect-[4/3] hidden">
+                        <canvas id="viewerCanvas"></canvas>
+                        <div class="viewer-overlay" id="dimensionsOverlay">
+                            <span id="modelDimensions">Dimensions: -</span>
+                        </div>
+                    </div>
+
+                    <!-- Viewer Controls Hint -->
+                    <div id="viewerHint" class="hidden text-center mt-3 text-textSecondary text-xs">
+                        🖱️ Left click + drag to rotate | Scroll to zoom | Right click + drag to pan
+                    </div>
+                </div>
+
+                <!-- Right: Quote Form -->
+                <div>
+                    <div class="bg-surface border border-border rounded-xl p-6">
+                        <h2 class="font-heading text-xl font-bold mb-6">Request a Quote</h2>
+
+                        <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+
+                            <div>
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+
+                            <div>
+                                <label for="phone">WhatsApp / Phone *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" required>
+                            </div>
+
+                            <div>
+                                <label for="material">Preferred Material</label>
+                                <select id="material" name="material">
+                                    <option value="not-sure">Not sure — recommend for me</option>
+                                    <option value="pla">PLA (Budget-friendly)</option>
+                                    <option value="abs">ABS (Heat resistant)</option>
+                                    <option value="petg">PETG (Durable)</option>
+                                    <option value="tpu">TPU (Flexible)</option>
+                                    <option value="nylon">Nylon (Engineering)</option>
+                                    <option value="resin-standard">Standard Resin (High detail)</option>
+                                    <option value="resin-tough">Tough Resin (Strong + detailed)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="quantity">Quantity</label>
+                                <input type="number" id="quantity" name="quantity" placeholder="1" min="1" value="1">
+                            </div>
+
+                            <div>
+                                <label for="finish">Finish / Post-Processing</label>
+                                <select id="finish" name="finish">
+                                    <option value="raw">Raw (as printed)</option>
+                                    <option value="sanded">Sanded & smoothed</option>
+                                    <option value="painted">Painted (single color)</option>
+                                    <option value="painted-detail">Painted (multi-color/detailed)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="delivery">Delivery Preference</label>
+                                <select id="delivery" name="delivery">
+                                    <option value="pickup">Local pickup (FREE)</option>
+                                    <option value="local-delivery">Local delivery (within city)</option>
+                                    <option value="shipping">Ship to my address</option>
+                                    <option value="express">Express shipping (1-2 days)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="notes">Additional Notes</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Any specific requirements, dimensions, color preferences, deadline..."></textarea>
+                            </div>
+
+                            <!-- Hidden fields for file info -->
+                            <input type="hidden" id="hiddenFileName" name="file_name" value="">
+                            <input type="hidden" id="hiddenFileSize" name="file_size" value="">
+                            <input type="hidden" id="hiddenDimensions" name="model_dimensions" value="">
+
+                            <button type="submit" class="w-full bg-primary text-dark py-3 rounded-lg font-semibold text-lg hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all hover:-translate-y-0.5">
+                                Submit Quote Request
+                            </button>
+
+                            <p class="text-textSecondary text-xs text-center">We'll review your file and send a detailed quote within 2 hours via WhatsApp/email.</p>
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="flex items-center gap-4 my-6">
+                            <div class="flex-1 border-t border-border"></div>
+                            <span class="text-textSecondary text-sm">or</span>
+                            <div class="flex-1 border-t border-border"></div>
+                        </div>
+
+                        <!-- WhatsApp Alternative -->
+                        <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%27d%20like%20a%20quote%20for%203D%20printing.%20I%20have%20a%20file%20to%20share." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-lg font-semibold hover:shadow-[0_0_15px_rgba(37,211,102,0.3)] transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Send File on WhatsApp Instead
+                        </a>
+
+                        <div class="mt-6 flex items-center gap-2 text-textSecondary text-xs">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span>Your files are treated as confidential and never shared.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div><a href="index.html" class="flex items-center gap-2 mb-4"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg><span class="font-heading font-bold text-lg">Layer<span class="text-primary">Craft</span></span></a><p class="text-textSecondary text-sm">From File to Form.</p></div>
+                <div><h4 class="font-heading font-semibold mb-4">Quick Links</h4><div class="space-y-2"><a href="services.html" class="block text-textSecondary hover:text-primary text-sm">Services</a><a href="materials.html" class="block text-textSecondary hover:text-primary text-sm">Materials</a><a href="pricing.html" class="block text-textSecondary hover:text-primary text-sm">Pricing</a></div></div>
+                <div><h4 class="font-heading font-semibold mb-4">Company</h4><div class="space-y-2"><a href="about.html" class="block text-textSecondary hover:text-primary text-sm">About</a><a href="faq.html" class="block text-textSecondary hover:text-primary text-sm">FAQ</a><a href="contact.html" class="block text-textSecondary hover:text-primary text-sm">Contact</a></div></div>
+                <div><h4 class="font-heading font-semibold mb-4">Contact</h4><div class="space-y-2 text-textSecondary text-sm"><p>📧 hello@layercraft.in</p><p>📞 +91-XXXXXXXXXX</p></div></div>
+            </div>
+            <div class="border-t border-border mt-8 pt-8 text-center text-textSecondary text-xs"><p>© 2025 LayerCraft. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="assets/js/viewer.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

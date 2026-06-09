@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayerCraft | Professional 3D Printing Service India</title>
+    <meta name="description" content="Professional 3D printing service in India. FDM & Resin printing for prototypes, custom parts, models & gifts. Online ordering, pan-India shipping. Starting at ₹49.">
+    <meta property="og:title" content="LayerCraft | From File to Form">
+    <meta property="og:description" content="Professional 3D printing service in India. Upload your file, get a quote in minutes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://layercraft.in">
+    <link rel="canonical" href="https://layercraft.in">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00E5FF',
+                        accent: '#7C3AED',
+                        dark: '#0A0A0F',
+                        surface: '#12121A',
+                        surfaceHover: '#1A1A2E',
+                        border: '#1E293B',
+                        textPrimary: '#F0F0F5',
+                        textSecondary: '#94A3B8',
+                        success: '#00FF88',
+                        warning: '#FFB800',
+                    },
+                    fontFamily: {
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "LayerCraft",
+        "description": "Professional 3D printing service in India offering FDM and Resin/SLA printing.",
+        "url": "https://layercraft.in",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "priceRange": "₹49 - ₹10000+",
+        "openingHours": "Mo-Sa 10:00-19:00"
+    }
+    </script>
+</head>
+<body class="bg-dark text-textPrimary font-body">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/>
+                        <rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/>
+                        <rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/>
+                    </svg>
+                    <span class="font-heading font-bold text-xl text-textPrimary">Layer<span class="text-primary">Craft</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="services.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Services</a>
+                    <a href="materials.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Materials</a>
+                    <a href="pricing.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Pricing</a>
+                    <a href="industries.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Industries</a>
+                    <a href="about.html" class="text-textSecondary hover:text-primary transition-colors text-sm">About</a>
+                    <a href="faq.html" class="text-textSecondary hover:text-primary transition-colors text-sm">FAQ</a>
+                    <a href="contact.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Contact</a>
+                    <a href="upload.html" class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all hover:-translate-y-0.5">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-textSecondary hover:text-primary" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-border">
+            <div class="px-4 py-4 space-y-3">
+                <a href="services.html" class="block text-textSecondary hover:text-primary transition-colors">Services</a>
+                <a href="materials.html" class="block text-textSecondary hover:text-primary transition-colors">Materials</a>
+                <a href="pricing.html" class="block text-textSecondary hover:text-primary transition-colors">Pricing</a>
+                <a href="industries.html" class="block text-textSecondary hover:text-primary transition-colors">Industries</a>
+                <a href="about.html" class="block text-textSecondary hover:text-primary transition-colors">About</a>
+                <a href="faq.html" class="block text-textSecondary hover:text-primary transition-colors">FAQ</a>
+                <a href="contact.html" class="block text-textSecondary hover:text-primary transition-colors">Contact</a>
+                <a href="upload.html" class="block bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-center">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, #00E5FF 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/90 to-dark"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-1.5 mb-6 animate-fadeIn">
+                    <span class="w-2 h-2 bg-success rounded-full animate-pulse"></span>
+                    <span class="text-textSecondary text-sm">Now accepting orders across India</span>
+                </div>
+
+                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fadeInUp">
+                    From Digital to Real.<br>
+                    <span class="text-primary">Precision 3D Printing</span> for India.
+                </h1>
+
+                <p class="text-textSecondary text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto animate-fadeInUp animation-delay-200">
+                    Upload. Quote. Print. Ship.<br>Professional 3D printing starting at ₹49.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp animation-delay-400">
+                    <a href="upload.html" class="bg-primary text-dark px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] transition-all hover:-translate-y-1">
+                        Upload & Get Quote
+                    </a>
+                    <a href="pricing.html" class="border border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/10 transition-all">
+                        View Pricing
+                    </a>
+                </div>
+
+                <!-- Trust Bar -->
+                <div class="mt-16 flex flex-wrap justify-center gap-6 sm:gap-10 text-textSecondary text-sm animate-fadeInUp animation-delay-600">
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>500+ Prints Delivered</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>4.8★ Google Rating</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span>Same-Day Quotes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        <span>Pan-India Shipping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">What We <span class="text-primary">Print</span></h2>
+                <p class="text-textSecondary text-lg max-w-2xl mx-auto">From rapid prototypes to finished products — we bring your digital designs into the physical world.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- FDM Card -->
+                <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">FDM Printing</h3>
+                    <p class="text-textSecondary text-sm mb-4">Strong, affordable parts in PLA, ABS, PETG, TPU & Nylon. From ₹5/gram.</p>
+                    <a href="services.html" class="text-primary text-sm font-medium hover:underline">Learn more →</a>
+                </div>
+
+                <!-- Resin Card -->
+                <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Resin / SLA</h3>
+                    <p class="text-textSecondary text-sm mb-4">Ultra-detail at 50μm resolution. Perfect for miniatures & precision parts.</p>
+                    <a href="services.html" class="text-primary text-sm font-medium hover:underline">Learn more →</a>
+                </div>
+
+                <!-- Design Card -->
+                <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">3D Design</h3>
+                    <p class="text-textSecondary text-sm mb-4">No file? We design from scratch. Sketches to print-ready models. From ₹499.</p>
+                    <a href="services.html" class="text-primary text-sm font-medium hover:underline">Learn more →</a>
+                </div>
+
+                <!-- Post-Processing Card -->
+                <div class="bg-surface border border-border rounded-xl p-6 hover:border-primary transition-all group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Post-Processing</h3>
+                    <p class="text-textSecondary text-sm mb-4">Sanding, painting, assembly — make your prints presentation-ready.</p>
+                    <a href="services.html" class="text-primary text-sm font-medium hover:underline">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-surface/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">How It <span class="text-primary">Works</span></h2>
+                <p class="text-textSecondary text-lg">Three simple steps from file to finished print</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="font-heading font-bold text-primary text-2xl">1</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl mb-3">Upload Your File</h3>
+                    <p class="text-textSecondary">Drop your STL, OBJ, or 3MF file. Preview it in 3D right in your browser. No account needed.</p>
+                    <!-- Connector line (desktop) -->
+                    <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="font-heading font-bold text-primary text-2xl">2</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl mb-3">Get Your Quote</h3>
+                    <p class="text-textSecondary">Select material and finish. We send a detailed quote within 2 hours via WhatsApp. No hidden fees.</p>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="font-heading font-bold text-primary text-2xl">3</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl mb-3">We Print & Ship</h3>
+                    <p class="text-textSecondary">Your part goes into production. Track via WhatsApp. Pickup or delivery anywhere in India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Preview -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Materials <span class="text-primary">Available</span></h2>
+                <p class="text-textSecondary text-lg">Choose the right material for your project</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="bg-surface border border-border rounded-xl p-4 text-center hover:border-primary transition-all">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-full mx-auto mb-3"></div>
+                    <h4 class="font-heading font-medium text-sm mb-1">PLA</h4>
+                    <p class="text-textSecondary text-xs">From ₹5/g</p>
+                </div>
+                <div class="bg-surface border border-border rounded-xl p-4 text-center hover:border-primary transition-all">
+                    <div class="w-10 h-10 bg-red-500/20 rounded-full mx-auto mb-3"></div>
+                    <h4 class="font-heading font-medium text-sm mb-1">ABS</h4>
+                    <p class="text-textSecondary text-xs">From ₹6/g</p>
+                </div>
+                <div class="bg-surface border border-border rounded-xl p-4 text-center hover:border-primary transition-all">
+                    <div class="w-10 h-10 bg-green-500/20 rounded-full mx-auto mb-3"></div>
+                    <h4 class="font-heading font-medium text-sm mb-1">PETG</h4>
+                    <p class="text-textSecondary text-xs">From ₹7/g</p>
+                </div>
+                <div class="bg-surface border border-border rounded-xl p-4 text-center hover:border-primary transition-all">
+                    <div class="w-10 h-10 bg-purple-500/20 rounded-full mx-auto mb-3"></div>
+                    <h4 class="font-heading font-medium text-sm mb-1">Resin</h4>
+                    <p class="text-textSecondary text-xs">From ₹11/g</p>
+                </div>
+                <div class="bg-surface border border-border rounded-xl p-4 text-center hover:border-primary transition-all">
+                    <div class="w-10 h-10 bg-yellow-500/20 rounded-full mx-auto mb-3"></div>
+                    <h4 class="font-heading font-medium text-sm mb-1">TPU</h4>
+                    <p class="text-textSecondary text-xs">From ₹9/g</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="materials.html" class="text-primary hover:underline font-medium">View all materials & properties →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-surface/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">What Our <span class="text-primary">Clients</span> Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-surface border border-border rounded-xl p-6">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-textSecondary text-sm mb-4">"Got my engineering prototype printed in 2 days. Quality was excellent and pricing was fair. Will definitely use again for my final year project."</p>
+                    <p class="font-medium text-sm">— Rahul K., Mechanical Engineering Student</p>
+                </div>
+
+                <div class="bg-surface border border-border rounded-xl p-6">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-textSecondary text-sm mb-4">"We ordered 50 custom enclosures for our IoT product. Consistent quality across all pieces. The team helped optimize our design for better printability."</p>
+                    <p class="font-medium text-sm">— Priya S., Hardware Startup Founder</p>
+                </div>
+
+                <div class="bg-surface border border-border rounded-xl p-6">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB800"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <p class="text-textSecondary text-sm mb-4">"Ordered a custom gift for my wife's birthday — a miniature of our house. They nailed it! Great communication throughout the process."</p>
+                    <p class="font-medium text-sm">— Amit D., Custom Gift Customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-8 sm:p-12 text-center">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Ready to Print?</h2>
+                <p class="text-textSecondary text-lg mb-8 max-w-xl mx-auto">Upload your 3D file and get a detailed quote within 2 hours. No hidden charges, no surprise fees.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="upload.html" class="bg-primary text-dark px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] transition-all hover:-translate-y-1">
+                        Upload Your File
+                    </a>
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%27d%20like%20to%20get%20a%20quote%20for%203D%20printing." class="bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.3)] transition-all hover:-translate-y-1 flex items-center justify-center gap-2" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/>
+                            <rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/>
+                            <rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/>
+                        </svg>
+                        <span class="font-heading font-bold text-lg">Layer<span class="text-primary">Craft</span></span>
+                    </a>
+                    <p class="text-textSecondary text-sm mb-4">From File to Form.<br>Professional 3D printing for India.</p>
+                    <p class="text-textSecondary text-xs">Made with ❤️ in India</p>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="services.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Services</a>
+                        <a href="materials.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Materials</a>
+                        <a href="pricing.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Pricing</a>
+                        <a href="upload.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Get Quote</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">About Us</a>
+                        <a href="industries.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Industries</a>
+                        <a href="faq.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">FAQ</a>
+                        <a href="contact.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-textSecondary text-sm">
+                        <p>📍 [Your City], India</p>
+                        <p>📞 +91-XXXXXXXXXX</p>
+                        <p>📧 hello@layercraft.in</p>
+                        <p>🕐 Mon-Sat 10AM-7PM</p>
+                    </div>
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://instagram.com/layercraft.in" target="_blank" rel="noopener" class="text-textSecondary hover:text-primary transition-colors" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="text-textSecondary hover:text-primary transition-colors" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 text-center text-textSecondary text-xs">
+                <p>© 2025 LayerCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%27d%20like%20to%20get%20a%20quote%20for%203D%20printing." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all hover:scale-110" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

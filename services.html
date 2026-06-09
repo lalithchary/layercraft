@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | LayerCraft - 3D Printing Services India</title>
+    <meta name="description" content="FDM printing, Resin/SLA, 3D design, post-processing, and batch production services. Professional quality at affordable prices.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00E5FF', accent: '#7C3AED', dark: '#0A0A0F', surface: '#12121A',
+                        surfaceHover: '#1A1A2E', border: '#1E293B', textPrimary: '#F0F0F5',
+                        textSecondary: '#94A3B8', success: '#00FF88', warning: '#FFB800',
+                    },
+                    fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-dark text-textPrimary font-body">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg>
+                    <span class="font-heading font-bold text-xl text-textPrimary">Layer<span class="text-primary">Craft</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="services.html" class="text-primary font-medium text-sm">Services</a>
+                    <a href="materials.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Materials</a>
+                    <a href="pricing.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Pricing</a>
+                    <a href="industries.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Industries</a>
+                    <a href="about.html" class="text-textSecondary hover:text-primary transition-colors text-sm">About</a>
+                    <a href="faq.html" class="text-textSecondary hover:text-primary transition-colors text-sm">FAQ</a>
+                    <a href="contact.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Contact</a>
+                    <a href="upload.html" class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">Get Quote</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-textSecondary hover:text-primary" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-border">
+            <div class="px-4 py-4 space-y-3">
+                <a href="services.html" class="block text-primary font-medium">Services</a>
+                <a href="materials.html" class="block text-textSecondary hover:text-primary">Materials</a>
+                <a href="pricing.html" class="block text-textSecondary hover:text-primary">Pricing</a>
+                <a href="industries.html" class="block text-textSecondary hover:text-primary">Industries</a>
+                <a href="about.html" class="block text-textSecondary hover:text-primary">About</a>
+                <a href="faq.html" class="block text-textSecondary hover:text-primary">FAQ</a>
+                <a href="contact.html" class="block text-textSecondary hover:text-primary">Contact</a>
+                <a href="upload.html" class="block bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-center">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-28 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-4">Our <span class="text-primary">Services</span></h1>
+            <p class="text-textSecondary text-lg max-w-2xl mx-auto">End-to-end 3D printing solutions — from design to delivery. Choose the service that fits your project.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+            <!-- FDM Printing -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <h2 class="font-heading text-2xl font-bold">FDM Printing</h2>
+                        <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full font-medium">Most Popular</span>
+                    </div>
+                    <p class="text-textSecondary mb-4">Fused Deposition Modeling — strong, affordable, versatile. Perfect for prototypes, mechanical parts, enclosures, and functional models.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Materials Available</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• PLA (biodegradable, easy to print)</li>
+                                <li>• ABS (heat resistant, strong)</li>
+                                <li>• PETG (chemical resistant, durable)</li>
+                                <li>• TPU (flexible, rubber-like)</li>
+                                <li>• Nylon (wear resistant, tough)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Specifications</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Layer resolution: 100-300μm</li>
+                                <li>• Max build size: 220×220×250mm</li>
+                                <li>• Infill: 10-100% customizable</li>
+                                <li>• Turnaround: 1-3 days</li>
+                                <li>• Colors: 15+ options</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-primary font-heading font-semibold">From ₹5/gram</span>
+                        <a href="upload.html" class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">Get Quote →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resin/SLA -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <h2 class="font-heading text-2xl font-bold">Resin / SLA Printing</h2>
+                        <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded-full font-medium">High Detail</span>
+                    </div>
+                    <p class="text-textSecondary mb-4">Stereolithography — ultra-high detail, smooth surface finish. Ideal for miniatures, jewelry masters, dental models, and precision parts.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Materials Available</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Standard Resin (general purpose)</li>
+                                <li>• Tough/ABS-like Resin (strength)</li>
+                                <li>• Flexible Resin (rubber-like)</li>
+                                <li>• Castable Resin (jewelry)</li>
+                                <li>• Clear Resin (transparent parts)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Specifications</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Layer resolution: 25-50μm</li>
+                                <li>• Max build size: 130×80×160mm</li>
+                                <li>• Surface finish: Near-injection mold</li>
+                                <li>• Turnaround: 2-4 days</li>
+                                <li>• UV-cured for durability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-accent font-heading font-semibold">From ₹11/gram</span>
+                        <a href="upload.html" class="bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all">Get Quote →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Design -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-heading text-2xl font-bold mb-2">3D Design & Modeling</h2>
+                    <p class="text-textSecondary mb-4">Don't have a 3D file? No problem. Our team creates print-ready CAD models from your sketches, photos, measurements, or descriptions.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">What We Design</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Mechanical parts & enclosures</li>
+                                <li>• Product prototypes</li>
+                                <li>• Replacement parts (from measurements)</li>
+                                <li>• Artistic & decorative pieces</li>
+                                <li>• Architectural scale models</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Process</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Share reference (sketch/photo/description)</li>
+                                <li>• We create initial design</li>
+                                <li>• 2 free revisions included</li>
+                                <li>• Deliver print-ready STL/STEP file</li>
+                                <li>• Optional: print the designed model</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-primary font-heading font-semibold">From ₹499</span>
+                        <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20need%20help%20with%203D%20design." class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all" target="_blank" rel="noopener">Discuss Design →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Processing -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Post-Processing & Finishing</h2>
+                    <p class="text-textSecondary mb-4">Transform raw prints into presentation-ready or production-quality parts with our finishing services.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Services</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Sanding & smoothing</li>
+                                <li>• Primer & filler application</li>
+                                <li>• Single color painting</li>
+                                <li>• Multi-color & detail painting</li>
+                                <li>• Assembly (multi-part models)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Options</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Matte / Gloss / Metallic finish</li>
+                                <li>• Custom color matching</li>
+                                <li>• Clear coat protection</li>
+                                <li>• Insert installation (nuts/threads)</li>
+                                <li>• Vapor smoothing (ABS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-accent font-heading font-semibold">From ₹110</span>
+                        <a href="upload.html" class="bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all">Request Finishing →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Production -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-heading text-2xl font-bold mb-2">Batch Production</h2>
+                    <p class="text-textSecondary mb-4">Need 10, 50, or 500 identical parts? We optimize for batch runs with consistent quality and volume pricing. Perfect for product launches and manufacturing support.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Benefits</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Volume discounts (10%+ off at 20+ units)</li>
+                                <li>• Consistent quality across all parts</li>
+                                <li>• Dedicated print scheduling</li>
+                                <li>• Quality report per batch</li>
+                                <li>• Priority turnaround available</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">Ideal For</h4>
+                            <ul class="text-textSecondary text-sm space-y-1">
+                                <li>• Startup product runs</li>
+                                <li>• Event giveaways & branded items</li>
+                                <li>• Manufacturing jigs & fixtures</li>
+                                <li>• Educational kits</li>
+                                <li>• Replacement part inventories</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-primary font-heading font-semibold">Custom Pricing</span>
+                        <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20need%20batch%20production%20pricing." class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all" target="_blank" rel="noopener">Discuss Batch Order →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Repair -->
+            <div class="bg-surface border border-border rounded-2xl p-8 md:flex md:gap-8 items-start">
+                <div class="w-16 h-16 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-heading text-2xl font-bold mb-2">File Repair & Optimization</h2>
+                    <p class="text-textSecondary mb-4">Got a file that won't print properly? We fix common issues like non-manifold edges, holes, intersecting faces, and optimize models for better printability.</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-accent font-heading font-semibold">From ₹110</span>
+                        <a href="upload.html" class="bg-accent text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all">Send File →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl font-bold mb-4">Not Sure Which Service You Need?</h2>
+            <p class="text-textSecondary text-lg mb-8">Send us your file or describe your project — we'll recommend the best approach.</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20need%20help%20choosing%20the%20right%20service." class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-[0_0_20px_rgba(37,211,102,0.3)] transition-all" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Ask on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-4">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg>
+                        <span class="font-heading font-bold text-lg">Layer<span class="text-primary">Craft</span></span>
+                    </a>
+                    <p class="text-textSecondary text-sm">From File to Form.<br>Professional 3D printing for India.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="services.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Services</a>
+                        <a href="materials.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Materials</a>
+                        <a href="pricing.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Pricing</a>
+                        <a href="upload.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Get Quote</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">About Us</a>
+                        <a href="industries.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Industries</a>
+                        <a href="faq.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">FAQ</a>
+                        <a href="contact.html" class="block text-textSecondary hover:text-primary text-sm transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-textSecondary text-sm">
+                        <p>📍 [Your City], India</p>
+                        <p>📞 +91-XXXXXXXXXX</p>
+                        <p>📧 hello@layercraft.in</p>
+                        <p>🕐 Mon-Sat 10AM-7PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-border mt-8 pt-8 text-center text-textSecondary text-xs">
+                <p>© 2025 LayerCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%27d%20like%20to%20get%20a%20quote%20for%203D%20printing." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all hover:scale-110" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

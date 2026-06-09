@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | LayerCraft - Frequently Asked Questions</title>
+    <meta name="description" content="Answers to common questions about 3D printing services, file formats, pricing, delivery, and more.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#00E5FF', accent: '#7C3AED', dark: '#0A0A0F', surface: '#12121A', surfaceHover: '#1A1A2E', border: '#1E293B', textPrimary: '#F0F0F5', textSecondary: '#94A3B8', success: '#00FF88', warning: '#FFB800' }, fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-dark text-textPrimary font-body">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg><span class="font-heading font-bold text-xl">Layer<span class="text-primary">Craft</span></span></a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="services.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Services</a>
+                    <a href="materials.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Materials</a>
+                    <a href="pricing.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Pricing</a>
+                    <a href="industries.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Industries</a>
+                    <a href="about.html" class="text-textSecondary hover:text-primary transition-colors text-sm">About</a>
+                    <a href="faq.html" class="text-primary font-medium text-sm">FAQ</a>
+                    <a href="contact.html" class="text-textSecondary hover:text-primary transition-colors text-sm">Contact</a>
+                    <a href="upload.html" class="bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">Get Quote</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-textSecondary hover:text-primary" aria-label="Toggle menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-border"><div class="px-4 py-4 space-y-3"><a href="services.html" class="block text-textSecondary">Services</a><a href="materials.html" class="block text-textSecondary">Materials</a><a href="pricing.html" class="block text-textSecondary">Pricing</a><a href="industries.html" class="block text-textSecondary">Industries</a><a href="about.html" class="block text-textSecondary">About</a><a href="faq.html" class="block text-primary font-medium">FAQ</a><a href="contact.html" class="block text-textSecondary">Contact</a><a href="upload.html" class="block bg-primary text-dark px-4 py-2 rounded-lg font-semibold text-center">Get Quote</a></div></div>
+    </nav>
+
+    <!-- FAQ Content -->
+    <section class="pt-28 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold mb-4 text-center">Frequently Asked <span class="text-primary">Questions</span></h1>
+            <p class="text-textSecondary text-lg text-center mb-12">Everything you need to know about our 3D printing services.</p>
+
+            <div class="space-y-3">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">What file formats do you accept?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">We accept STL, OBJ, 3MF, and STEP files. STL is the most common and recommended format for 3D printing. If you have a different format (IGES, Fusion 360, SolidWorks), send it over and we'll check compatibility and convert it for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">How long does printing take?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Most orders are completed in 1-3 business days. Simple prints under 6 hours of print time may ship same-day if ordered before noon. Large or complex prints may take 3-5 days. We'll give you an estimated completion time with your quote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">What's the minimum order?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">For students, there's no practical minimum — we print single small parts starting at ₹49. For standard orders, minimum is ₹99 (PLA). This covers base machine time, electricity, and handling regardless of print size.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">Can I visit the workshop?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Yes! Walk-ins are welcome during business hours (Monday to Saturday, 10AM to 7PM). You can discuss your project in person, see the printers in action, and pick up completed orders. No appointment needed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">How do I pay?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">We accept UPI (Google Pay, PhonePe, Paytm), bank transfer (NEFT/IMPS), and cash for walk-in orders. Payment is typically requested after quote approval, before printing begins. For repeat customers, we offer post-delivery payment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">Do you ship all over India?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Yes. We ship pan-India via Speed Post and private couriers (Delhivery, DTDC). Shipping starts at ₹80 for small packages, with costs varying by weight and distance. Express 1-2 day delivery is available for ₹150-350. Tracking number provided for all shipments.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">What if my print has a defect?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">We do quality checks on every print before shipping. If there's a defect on our end (layer shifting, failed print, dimensional inaccuracy), we reprint for free — no questions asked. Please share photos within 48 hours of receiving your order so we can assess and resolve quickly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">Can you help design my model?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Absolutely. Send us a sketch, photo, description, or even a rough idea — our team creates print-ready 3D models. Design services start at ₹499 for simple parts. Complex assemblies are quoted individually. 2 free revisions included with every design.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">What materials are strongest?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">For maximum strength: Nylon or PETG (FDM), Tough Resin (SLA). For impact resistance: ABS. For flexibility: TPU. For general prototyping: PLA is great and most affordable. Not sure? Tell us how the part will be used and we'll recommend the best material.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">Is my file kept private?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Yes. All files are treated as strictly confidential. We never share, display, sell, or reuse any customer files without explicit written permission. Files are deleted from our systems 30 days after order completion unless you request us to keep them on file for reorders.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">How accurate are the prints?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">FDM prints are accurate to ±0.2-0.3mm on most dimensions. Resin/SLA prints achieve ±0.05-0.1mm accuracy. For critical dimensions, let us know in your order notes and we'll measure and verify those specific features before shipping.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">Do you offer bulk/volume discounts?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">Yes! 5-10 units: 5% off. 11-25 units: 10% off. 26-50 units: 15% off. 50+ units: Custom pricing. Volume discounts are applied automatically. For large ongoing orders, we offer dedicated pricing — contact us to discuss.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="font-medium">What's the maximum print size?</span>
+                        <svg class="faq-chevron w-5 h-5 text-textSecondary flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-textSecondary text-sm">FDM: Up to 220×220×250mm in a single print. Larger models can be split into multiple parts and assembled. Resin: Up to 130×80×160mm. If your model exceeds these dimensions, we'll suggest the best splitting strategy and handle assembly if needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still have questions -->
+            <div class="mt-12 text-center bg-surface border border-border rounded-2xl p-8">
+                <h2 class="font-heading text-2xl font-bold mb-3">Still Have Questions?</h2>
+                <p class="text-textSecondary mb-6">We're happy to help. Reach out on WhatsApp for the fastest response.</p>
+                <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20have%20a%20question%20about%20your%203D%20printing%20services." class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-[0_0_15px_rgba(37,211,102,0.3)] transition-all" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Ask on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div><a href="index.html" class="flex items-center gap-2 mb-4"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="20" width="20" height="4" rx="2" fill="#00E5FF" opacity="1"/><rect x="8" y="14" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.7"/><rect x="10" y="8" width="20" height="4" rx="2" fill="#00E5FF" opacity="0.4"/></svg><span class="font-heading font-bold text-lg">Layer<span class="text-primary">Craft</span></span></a><p class="text-textSecondary text-sm">From File to Form.</p></div>
+                <div><h4 class="font-heading font-semibold mb-4">Quick Links</h4><div class="space-y-2"><a href="services.html" class="block text-textSecondary hover:text-primary text-sm">Services</a><a href="materials.html" class="block text-textSecondary hover:text-primary text-sm">Materials</a><a href="pricing.html" class="block text-textSecondary hover:text-primary text-sm">Pricing</a></div></div>
+                <div><h4 class="font-heading font-semibold mb-4">Company</h4><div class="space-y-2"><a href="about.html" class="block text-textSecondary hover:text-primary text-sm">About</a><a href="faq.html" class="block text-textSecondary hover:text-primary text-sm">FAQ</a><a href="contact.html" class="block text-textSecondary hover:text-primary text-sm">Contact</a></div></div>
+                <div><h4 class="font-heading font-semibold mb-4">Contact</h4><div class="space-y-2 text-textSecondary text-sm"><p>📧 hello@layercraft.in</p><p>📞 +91-XXXXXXXXXX</p></div></div>
+            </div>
+            <div class="border-t border-border mt-8 pt-8 text-center text-textSecondary text-xs"><p>© 2025 LayerCraft. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | LayerCraft</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#00E5FF', accent: '#7C3AED', dark: '#0A0A0F', surface: '#12121A', border: '#1E293B', textPrimary: '#F0F0F5', textSecondary: '#94A3B8' }, fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
+</head>
+<body class="bg-dark text-textPrimary font-body min-h-screen flex items-center justify-center">
+    <div class="text-center px-4">
+        <h1 class="font-heading text-8xl font-bold text-primary mb-4">404</h1>
+        <h2 class="font-heading text-2xl font-bold mb-4">Page Not Found</h2>
+        <p class="text-textSecondary text-lg mb-8">Looks like this layer didn't print correctly. Let's get you back on track.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="bg-primary text-dark px-6 py-3 rounded-lg font-semibold hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-all">Go Home</a>
+            <a href="upload.html" class="border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-all">Upload & Get Quote</a>
+        </div>
+    </div>
+</body>
+</html>
