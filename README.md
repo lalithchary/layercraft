@@ -3,7 +3,7 @@
 Professional 3D printing service website for India. Static site hosted on GitHub Pages.
 
 ## Live URL
-https://layercraft.in
+https://layercraft.shop
 
 ## Tech Stack
 - Static HTML5 + CSS3 + JavaScript
@@ -56,7 +56,7 @@ git push -u origin main
 - Save
 
 ### 3. Connect Custom Domain
-- Buy `layercraft.in` from GoDaddy/Namecheap (~₹199-349/year)
+- Buy `layercraft.shop` from GoDaddy/Namecheap (~₹199-349/year)
 - Add DNS records:
   - A record → 185.199.108.153
   - A record → 185.199.109.153
@@ -73,8 +73,8 @@ git push -u origin main
 
 ### 5. Update Placeholders
 Search and replace these placeholders:
-- `91XXXXXXXXXX` → Your WhatsApp number
-- `+91-XXXXXXXXXX` → Your phone number
+- `918186891961` → Your WhatsApp number
+- `+91-8186891961` → Your phone number
 - `[Your City]` → Your city name
 - `[Your Address]` → Your full address
 - `[State]` → Your state

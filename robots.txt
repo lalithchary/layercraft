@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://layercraft.in/sitemap.xml
+Sitemap: https://layercraft.shop/sitemap.xml
